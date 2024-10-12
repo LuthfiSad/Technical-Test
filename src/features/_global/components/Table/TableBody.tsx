@@ -1,9 +1,7 @@
-import React, { PropsWithChildren } from "react";
-
-interface ITableBodyProps extends PropsWithChildren {
+interface TableBodyProps {
   children: React.ReactNode;
 }
 
-export const TableBody: React.FC<ITableBodyProps> = ({ children }) => {
+export const TableBody: React.FC<TableBodyProps> = ({ children }) => {
   return <tbody>{children}</tbody>;
 };

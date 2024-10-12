@@ -1,9 +1,13 @@
-import React, { PropsWithChildren } from "react";
+import React, { ReactNode, TableHTMLAttributes } from "react";
 
-interface ITableBodyProps extends PropsWithChildren {
-  children: React.ReactNode;
+interface ITable extends TableHTMLAttributes<HTMLTableElement> {
+  children: ReactNode;
 }
 
-export const Table: React.FC<ITableBodyProps> = ({ children }) => {
-  return <table className="w-full min-w-[640px] table-auto">{children}</table>;
+export const Table: React.FC<ITable> = ({ children, ...rest }) => {
+  return (
+    <table className="w-full table-auto" {...rest}>
+      {children}
+    </table>
+  );
 };

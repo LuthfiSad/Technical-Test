@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Dokumentasi Frontend - Aplikasi Chart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deskripsi Proyek
+Proyek ini adalah aplikasi frontend yang dibangun menggunakan **React**, **TypeScript**, dan **Tailwind CSS**. Aplikasi ini menampilkan grafik yang memberikan representasi visual data pelanggan.
 
-Currently, two official plugins are available:
+## Teknologi yang Digunakan
+- **React**: Untuk membangun antarmuka pengguna.
+- **TypeScript**: Untuk memberikan type checking dan meningkatkan kualitas kode.
+- **Tailwind CSS**: Untuk styling dan layout yang responsif dan modern.
+- **Vite**: Sebagai build tool untuk pengembangan dan produksi.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalasi
+1. Clone repositori ini:
+   ```bash
+   git clone https://github.com/LuthfiSad/Technical-Test.git
+   cd repository
+   ```
+   
+2. Instal dependensi:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Menjalankan Aplikasi
+Untuk menjalankan aplikasi dalam mode pengembangan, gunakan perintah berikut:
+```bash
+npm run dev
 ```
+Aplikasi akan tersedia di `http://localhost:5173` (atau port yang ditentukan oleh Vite).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Skrip NPM
+Berikut adalah skrip yang tersedia dalam `package.json`:
+```json
+"scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+}
 ```
+- **dev**: Menjalankan aplikasi dalam mode pengembangan.
+- **build**: Membangun aplikasi untuk produksi.
+- **lint**: Memeriksa kode menggunakan ESLint.
+- **preview**: Menampilkan aplikasi setelah build.
+
+## Kontribusi
+Silakan ajukan pull request jika Anda ingin berkontribusi pada proyek ini.

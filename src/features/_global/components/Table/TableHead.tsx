@@ -1,25 +1,19 @@
-import { Typography } from "@material-tailwind/react";
-import React from "react";
-
-interface ITableHeadProps {
-  field: string[];
+interface TableHeadList {
+  HeadList: string[];
 }
 
-export const TableHead: React.FC<ITableHeadProps> = ({ field }) => {
+export const TableHead: React.FC<TableHeadList> = ({ HeadList }) => {
   return (
     <thead>
-      <tr>
-        {field.map((item, index) => (
+      <tr className="bg-gray-2 text-left dark:bg-meta-4 border-y border-[#eee]">
+        {HeadList.map((head, index) => (
           <th
+            className={`px-4 py-4 font-medium text-nowrap text-white ${
+              index === HeadList.length - 1 && "text-center"
+            }`}
             key={index}
-            className="border-b border-blue-gray-50 py-3 px-5 text-left"
           >
-            <Typography
-              variant="small"
-              className="text-[11px] font-bold uppercase text-blue-gray-400"
-            >
-              {item}
-            </Typography>
+            {head}
           </th>
         ))}
       </tr>

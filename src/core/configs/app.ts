@@ -4,7 +4,5 @@ export const CONFIG_APP = {
 };
 
 export const API_ENDPOINT = {
-  login: `${CONFIG_APP.BASE_URL}/auth/admin/login`,
-  register: `${CONFIG_APP.BASE_URL}/auth/admin/register`,
-  anggota: `${CONFIG_APP.BASE_URL}/anggota`,
+  customers: `${CONFIG_APP.BASE_URL}/customers`,
 }
