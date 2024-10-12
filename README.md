@@ -1,4 +1,4 @@
-# Dokumentasi Frontend - Aplikasi Chart
+# Technical Test
 
 ## Deskripsi Proyek
 Proyek ini adalah aplikasi frontend yang dibangun menggunakan **React**, **TypeScript**, dan **Tailwind CSS**. Aplikasi ini menampilkan grafik yang memberikan representasi visual data pelanggan.
